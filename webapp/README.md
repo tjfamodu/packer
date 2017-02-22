@@ -10,16 +10,17 @@ Provided in Template:
  * Npm
  * Ember Cli
 
-Setup:
+## Setup
 Create a file named `variables.json` and include AWS access key, secret key, vpc id, subnet id, and security group id. See [Packer Documentation](https://www.packer.io/docs/templates/user-variables.html) for alternative ways to set up user variables.
 
-_Note: `variables.json` is added to `.gitignore` to protect environment variables_
+### Note
+_`variables.json` is added to `.gitignore` to protect environment variables_
 
-Validate:
+## Validate
 `packer validate -var-files=variables.json webapp.json`
 
-Build:
+## Build
 `packer build -var-files=variables.json webapp.json`
 
-To Do:
+## Task List
 - Refactor provisioning portion (have all steps handled by Chef and not bash scripts)
