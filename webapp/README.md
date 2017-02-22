@@ -1,5 +1,3 @@
-# Rendia WebApp Packer template
-
 This template takes a base image of Amazon Linux 2016.09.01 (HVM) and configures to a LAMP stack with Node and Ember. This template also produces a Docker Image.
 
 Provided in Template:
