@@ -1,0 +1,48 @@
+{
+  "variables" : {
+    "home": "{{env `HOME`}}"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "vpc_id": "{{user `vpc_id`}}",
+      "access_key": "{{user `aws_access_key`}}",
+      "ami_name": "rendia-packer {{timestamp}}",
+      "instance_type": "m3.medium",
+      "region": "us-east-1",
+      "run_tags": {
+        "name": "packer {{timestamp}}"
+      },
+      "run_volume_tags": {
+        "name": "rendia-packer_ebs {{timestamp}}"
+      },
+      "secret_key": "{{user `aws_secret_key`}}",
+      "security_group_id": "{{user `security_group_id`}}",
+      "source_ami": "ami-0b33d91d",
+      "ssh_username": "ec2-user",
+      "subnet_id": "{{user `subnet_id`}}",
+      "tags": {
+        "description": "AMI for Rendia web app using Amazon Linux(HVM) for use in testing environment, created from Packer Template",
+        "environment": "testing",
+        "name": "rendia-packer_testing {{timestamp}}"
+      }
+    }
+  ],
+  "provisioners" : [
+    {
+      "type": "shell",
+      "script": "scripts/aws.sh"
+    },
+    {
+      "type": "chef-solo",
+      "cookbook_paths": ["{{ user `home` }}/Rendia/repos/chef-cookbooks", "cookbooks"],
+      "run_list": [
+        "build-essential",
+        "python",
+        "app::install_node",
+        "echo::install_ember"
+      ]
+    }
+  ],
+  "post-processors": []
+}
