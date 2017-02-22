@@ -35,12 +35,12 @@
     },
     {
       "type": "chef-solo",
-      "cookbook_paths": ["{{ user `home` }}/Rendia/repos/chef-cookbooks", "cookbooks"],
+      "cookbook_paths": ["cookbooks"],
       "run_list": [
         "build-essential",
         "python",
-        "app::install_node",
-        "echo::install_ember"
+        "dependencies::install_node",
+        "dependencies::install_ember"
       ]
     }
   ],
