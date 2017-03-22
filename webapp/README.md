@@ -9,7 +9,8 @@ Provided in Template:
  * Ember Cli
 
 ## Setup
-Create a file named `variables.json` and include AWS access key, secret key, vpc id, subnet id, and security group id. See [Packer Documentation](https://www.packer.io/docs/templates/user-variables.html) for alternative ways to set up user variables.
+
+ Copy `variables.example.json` and name `variables.json` (already .gitignore) and include AWS access key, secret key, vpc id, subnet id, and security group id. See [Packer Documentation](https://www.packer.io/docs/templates/user-variables.html) for alternative ways to set up user variables.
 
 ### Note
 _`variables.json` is added to `.gitignore` to protect environment variables_
