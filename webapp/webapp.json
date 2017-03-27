@@ -46,7 +46,8 @@
         "build-essential",
         "python",
         "dependencies::install_node",
-        "dependencies::install_ember"
+        "dependencies::install_ember",
+        "codedeploy"
       ]
     }
   ],

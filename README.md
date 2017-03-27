@@ -2,6 +2,7 @@
 
 [Packer](https://www.packer.io/) is a tool that is used to create machine images for multiple platforms with a single configuration.
 
+
 ## Basic Commands
 
 * `packer validate` checks syntax of template

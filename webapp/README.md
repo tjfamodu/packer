@@ -16,10 +16,10 @@ Provided in Template:
 _`variables.json` is added to `.gitignore` to protect environment variables_
 
 ## Validate
-`packer validate -var-files=variables.json webapp.json`
+`packer validate -var-file=variables.json webapp.json`
 
 ## Build
-`packer build -var-files=variables.json webapp.json`
+`packer build -var-file=variables.json webapp.json`
 
 ## Task List
 - Refactor provisioning portion (have all steps handled by Chef and not bash scripts)
