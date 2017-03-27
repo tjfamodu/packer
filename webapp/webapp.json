@@ -36,8 +36,9 @@
 
     {
     "type": "shell",
-    "script": "scripts/codedeploy.sh"
-    },
+    "execute_command": "echo | sudo -S -u ec2-user '{{ .Path}}'",
+    "script": "scripts/codedeploy-logs.sh"
+  },
 
     {
       "type": "chef-solo",
@@ -50,6 +51,7 @@
         "codedeploy"
       ]
     }
+
   ],
   "post-processors": []
 }
