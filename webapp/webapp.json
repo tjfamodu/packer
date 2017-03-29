@@ -33,13 +33,6 @@
       "type": "shell",
       "script": "scripts/aws.sh"
     },
-
-    {
-    "type": "shell",
-    "execute_command": "echo | sudo -S -u ec2-user '{{ .Path}}'",
-    "script": "scripts/codedeploy-logs.sh"
-  },
-
     {
       "type": "chef-solo",
       "cookbook_paths": ["cookbooks"],
