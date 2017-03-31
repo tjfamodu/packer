@@ -1,12 +1,12 @@
 #
-# Cookbook:: deploy
+# Cookbook Name:: npm
 # Spec:: default
 #
-# Copyright:: 2017, The Authors, All Rights Reserved.
+# Copyright (c) 2017 The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'deploy::default' do
+describe 'npm::install_gulp' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new

@@ -39,8 +39,8 @@
       "run_list": [
         "build-essential",
         "python",
-        "dependencies::install_node",
-        "dependencies::install_ember",
+        "npm::install_node",
+        "npm::install_ember",
         "codedeploy"
       ]
     }

@@ -1,9 +1,9 @@
 # # encoding: utf-8
 
-# Inspec test for recipe deploy::default
+# Inspec test for recipe npm::install_gulp
 
 # The Inspec reference, with examples and extensive documentation, can be
-# found at http://inspec.io/docs/reference/resources/
+# found at https://docs.chef.io/inspec_reference.html
 
 unless os.windows?
   describe user('root') do
