@@ -24,3 +24,7 @@ end
 execute "npm config set unsafe-perm true" do
     action :run
 end
+
+execute "npm install es6-promise" do
+  action :run
+end
