@@ -4,7 +4,6 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-
 execute 'install nodejs' do
   command 'sudo yum install -y nodejs npm --enablerepo=epel'
 end

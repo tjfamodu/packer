@@ -39,9 +39,9 @@
       "run_list": [
         "build-essential",
         "python",
+        "npm::default",
         "npm::install_node",
         "npm::install_ember",
-        "npm::install_gulp",
         "composer",
         "codedeploy"
       ]
